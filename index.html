@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="GCC Analyst Market Tracker is an independent data analytics project tracking aggregate analyst-role demand signals across the Gulf."
+    >
+    <title>GCC Analyst Market Tracker</title>
+    <link rel="stylesheet" href="styles.css?v=20260524-recommendation-list">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="GCC Analyst Market Tracker home">
+        <span class="brand-mark" aria-hidden="true">GCC</span>
+        <span>Analyst Market Tracker</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#signals">Signals</a>
+        <a href="#method">Method</a>
+        <a href="#beta">Beta</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">Analyst career intelligence across the Gulf.</h1>
+          <p class="hero-text">
+            GCC Analyst Market Tracker turns sampled job-market data into weekly aggregate signals about analyst-role demand, cities, skills, and role paths.
+          </p>
+        </div>
+
+        <div class="dashboard-preview evidence-preview" aria-label="Project evidence preview">
+          <div class="preview-header">
+            <div>
+              <h2>Built from reviewed market signals.</h2>
+            </div>
+            <span class="period">May 2026</span>
+          </div>
+
+          <div class="metric-grid evidence-grid">
+            <div class="metric">
+              <span class="metric-label">Reviewed signals</span>
+              <strong>1,239</strong>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Recommendation rows</span>
+              <strong>1,285</strong>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Community members</span>
+              <strong>122+</strong>
+            </div>
+          </div>
+
+          <div class="beta-preview-body evidence-note">
+            <p>
+              Python and Excel/CSV workflows clean, dedupe, classify, extract skills, and generate dashboard-ready weekly summaries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics-strip" aria-label="Current project metrics">
+        <article>
+          <strong>1,239</strong>
+          <span>Reviewed analyst-role signals</span>
+        </article>
+        <article>
+          <strong>6</strong>
+          <span>GCC countries</span>
+        </article>
+        <article>
+          <strong>18</strong>
+          <span>Cities tracked</span>
+        </article>
+        <article>
+          <strong>20</strong>
+          <span>Role categories</span>
+        </article>
+        <article>
+          <strong>31</strong>
+          <span>Tracked skills</span>
+        </article>
+        <article>
+          <strong>1,285</strong>
+          <span>Recommendation rows</span>
+        </article>
+        <article>
+          <strong>122+</strong>
+          <span>Community members</span>
+        </article>
+      </section>
+
+      <section class="dashboard-shot" aria-labelledby="dashboard-shot-title">
+        <div class="dashboard-shot-copy">
+          <p class="eyebrow">Dashboard overview</p>
+          <h2 id="dashboard-shot-title">Dashboard output from the May 22 market-signal build.</h2>
+          <p>
+            The private dashboard converts reviewed records into aggregate city, country, role, skill, and recommendation views for weekly market updates.
+          </p>
+        </div>
+        <div class="proof-grid" aria-label="May 22 snapshot proof">
+          <article>
+            <span>Snapshot date</span>
+            <strong>May 22, 2026</strong>
+          </article>
+          <article>
+            <span>Data freshness</span>
+            <strong>752 fresh signals</strong>
+            <p>0-30 day posting window, plus 205 recent and 272 unknown-date records.</p>
+          </article>
+          <article>
+            <span>Public proof file</span>
+            <strong>Anonymized sample</strong>
+            <a class="proof-link" href="public-sample-may22.csv">Open CSV sample</a>
+          </article>
+        </div>
+        <figure class="dashboard-shot-frame">
+          <img
+            src="assets/dashboard-overview.png?v=20260524-market-snapshot"
+            alt="GCC Analyst Market Tracker dashboard showing 1,239 included postings across 6 countries, 18 cities, and 31 tracked skills."
+          >
+          <figcaption>Screenshot from the May 22, 2026 local dashboard build: 1,239 reviewed signals, 6 GCC countries, 18 cities, and 31 tracked skills.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="signals" aria-labelledby="signals-title">
+        <div class="section-heading">
+          <p class="eyebrow">Signals</p>
+          <h2 id="signals-title">Built for people deciding what to learn, where to focus, and which analyst path to target.</h2>
+        </div>
+        <div class="info-grid">
+          <article>
+            <h3>Role demand</h3>
+            <p>
+              Compare analyst-adjacent role categories such as Data Analyst, Business Analyst, BI Analyst, Financial Analyst, Operations Analyst, Product Analyst, and related data roles.
+            </p>
+          </article>
+          <article>
+            <h3>City focus</h3>
+            <p>
+              Track where demand appears concentrated across core Gulf cities, with wider country coverage being tested before it becomes a main dashboard view.
+            </p>
+          </article>
+          <article>
+            <h3>Skill direction</h3>
+            <p>
+              See recurring skill mentions such as analytics tools, spreadsheets, querying, visualization, statistics, forecasting, and business systems.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section compact" id="build" aria-labelledby="build-title">
+        <div class="section-heading">
+          <p class="eyebrow">What I built</p>
+          <h2 id="build-title">A data pipeline that turns messy job-market samples into dashboard-ready signals.</h2>
+        </div>
+        <div class="build-grid">
+          <article>
+            <span class="step-number">01</span>
+            <h3>Cleaned and normalized data</h3>
+            <p>Built Python and Excel/CSV workflows to standardize sampled analyst-role records into comparable fields.</p>
+          </article>
+          <article>
+            <span class="step-number">02</span>
+            <h3>Deduped and classified roles</h3>
+            <p>Grouped duplicate records and categorized analyst roles across data, business, BI, finance, operations, product, and strategy paths.</p>
+          </article>
+          <article>
+            <span class="step-number">03</span>
+            <h3>Extracted skill signals</h3>
+            <p>Tracked recurring skill mentions such as SQL, Excel, Power BI, Python, Tableau, forecasting, statistics, and data visualization.</p>
+          </article>
+          <article>
+            <span class="step-number">04</span>
+            <h3>Generated trend summaries</h3>
+            <p>Produced aggregate outputs across city demand, role demand, skill demand, freshness, and confidence metrics for weekly market briefs.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="recommender" aria-labelledby="recommender-title">
+        <div class="section-heading">
+          <p class="eyebrow">Recommendation engine</p>
+          <h2 id="recommender-title">Role-and-market skill recommendations from reviewed signals.</h2>
+        </div>
+        <div class="recommendation-panel">
+          <div>
+            <span class="label">Example target</span>
+            <h3>Data Analyst - Dubai</h3>
+            <p>
+              The recommendation engine ranks skills by how often they appear in matching reviewed analyst-role signals for the selected role and market.
+            </p>
+          </div>
+          <ol class="skill-ranking" aria-label="Example recommended skills">
+            <li>
+              <span class="rank">01</span>
+              <span class="skill-name">SQL</span>
+              <span class="skill-note">Core querying</span>
+            </li>
+            <li>
+              <span class="rank">02</span>
+              <span class="skill-name">Data Visualization</span>
+              <span class="skill-note">Dashboard communication</span>
+            </li>
+            <li>
+              <span class="rank">03</span>
+              <span class="skill-name">Power BI</span>
+              <span class="skill-note">BI reporting</span>
+            </li>
+            <li>
+              <span class="rank">04</span>
+              <span class="skill-name">Excel</span>
+              <span class="skill-note">Spreadsheet analysis</span>
+            </li>
+            <li>
+              <span class="rank">05</span>
+              <span class="skill-name">Tableau</span>
+              <span class="skill-note">Visualization tooling</span>
+            </li>
+            <li>
+              <span class="rank">06</span>
+              <span class="skill-name">Python</span>
+              <span class="skill-note">Analysis scripting</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section compact" id="method" aria-labelledby="method-title">
+        <div class="section-heading">
+          <p class="eyebrow">Method</p>
+          <h2 id="method-title">Directional career intelligence, not a job board.</h2>
+        </div>
+        <div class="scope-list">
+          <div>
+            <span class="label">What it measures</span>
+            <p>Reviewed market signals are cleaned, deduplicated where possible, categorized, and converted into aggregate weekly views.</p>
+          </div>
+          <div>
+            <span class="label">What it avoids</span>
+            <p>The public page shows summary-level outputs and examples rather than raw records.</p>
+          </div>
+          <div>
+            <span class="label">How to read it</span>
+            <p>Counts represent reviewed roles in this dataset, not a complete count of every open job in the Gulf. Signals are strongest when patterns repeat across snapshots.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="beta" aria-labelledby="beta-title">
+        <div class="section-heading">
+          <p class="eyebrow">Beta</p>
+          <h2 id="beta-title">122+ members following weekly Gulf analyst-market updates.</h2>
+        </div>
+        <div class="beta-panel">
+          <div class="beta-stat">
+            <strong>122+</strong>
+            <span>Community members</span>
+          </div>
+          <p>
+            The beta community gives the project a visible audience for weekly market briefs, feedback, chart requests, and career-intelligence discussion across the Gulf.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>GCC Analyst Market Tracker is a private beta aggregate analytics project. It is directional career intelligence, not legal, hiring, or investment advice.</p>
+    </footer>
+    <script src="site.js?v=20260524-recommendation-list"></script>
+  </body>
+</html>
