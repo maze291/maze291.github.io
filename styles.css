@@ -423,14 +423,49 @@ h3 {
   font-size: 15px;
 }
 
+.proof-note {
+  margin-bottom: 14px;
+}
+
+.proof-actions,
+.sample-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .proof-link {
   color: var(--blue);
   font-weight: 700;
   text-decoration: none;
 }
 
-.proof-link:hover {
+.proof-link-secondary {
+  color: var(--muted);
+}
+
+.proof-link:hover,
+.button-link:hover {
   text-decoration: underline;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 700;
+}
+
+.button-link-secondary {
+  border-color: var(--line);
+  background: var(--white);
+  color: var(--ink);
 }
 
 .dashboard-shot-frame {
@@ -471,6 +506,92 @@ h3 {
 
 .section-heading h2 {
   max-width: 940px;
+}
+
+.sample-hero {
+  padding: clamp(54px, 7vw, 96px) clamp(20px, 5vw, 72px);
+  border-bottom: 1px solid var(--line);
+  background: var(--green-paper);
+}
+
+.sample-hero h1 {
+  max-width: 900px;
+}
+
+.sample-section {
+  padding: clamp(44px, 6vw, 72px) clamp(20px, 5vw, 72px);
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.sample-section .section-heading p:last-child {
+  max-width: 780px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.sample-table-wrap {
+  max-width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  overflow-x: auto;
+  box-shadow: 0 10px 30px rgba(22, 32, 42, 0.08);
+}
+
+.sample-table {
+  width: 100%;
+  min-width: 1480px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.sample-table th,
+.sample-table td {
+  padding: 13px 15px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.sample-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #eef5f4;
+  color: var(--ink);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sample-table tbody th {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background: var(--white);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.sample-table td:nth-child(7) {
+  min-width: 340px;
+  max-width: 440px;
+  white-space: normal;
+}
+
+.sample-table tr:last-child th,
+.sample-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.sample-table th:last-child,
+.sample-table td:last-child {
+  border-right: 0;
 }
 
 .info-grid {
