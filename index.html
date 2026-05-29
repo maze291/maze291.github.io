@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="GCC Analyst Market Tracker is a private-beta data analytics project for analyst-role career intelligence across the Gulf."
+      content="GCC Analyst Market Tracker is an independent data analytics project tracking aggregate analyst-role demand patterns across the Gulf."
     >
     <title>GCC Analyst Market Tracker</title>
-    <link rel="stylesheet" href="styles.css?v=20260529-recruiter-proof">
+    <link rel="stylesheet" href="styles.css?v=20260524-recommendation-list">
   </head>
   <body>
     <header class="site-header">
@@ -17,9 +17,9 @@
         <span>Analyst Market Tracker</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#proof">Proof</a>
+        <a href="#insights">Insights</a>
         <a href="#method">Method</a>
-        <a href="#privacy">Privacy</a>
+        <a href="#beta">Beta</a>
       </nav>
     </header>
 
@@ -28,95 +28,94 @@
         <div class="hero-copy">
           <h1 id="hero-title">Analyst career intelligence across the Gulf.</h1>
           <p class="hero-text">
-            GCC Analyst Market Tracker is a private-beta data project that turns sampled job-market records into role, city, and skill views for analyst career planning.
+            GCC Analyst Market Tracker turns sampled job-market data into weekly reads on analyst roles, hiring cities, skill demand, and career paths across the Gulf.
           </p>
         </div>
 
-        <div class="dashboard-preview evidence-preview" aria-label="Project proof preview">
+        <div class="dashboard-preview evidence-preview" aria-label="Project evidence preview">
           <div class="preview-header">
             <div>
-              <h2>Built as a working private analytics pipeline.</h2>
+              <h2>Built from reviewed analyst roles.</h2>
             </div>
-            <span class="period">Private beta</span>
+            <span class="period">May 2026</span>
           </div>
 
           <div class="metric-grid evidence-grid">
             <div class="metric">
-              <span class="metric-label">Workflow</span>
-              <strong>CSV-first</strong>
+              <span class="metric-label">Reviewed roles</span>
+              <strong>1,301</strong>
             </div>
             <div class="metric">
-              <span class="metric-label">Output</span>
-              <strong>Dashboard</strong>
+              <span class="metric-label">Skill recommendations</span>
+              <strong>1,293</strong>
             </div>
             <div class="metric">
-              <span class="metric-label">Public data</span>
-              <strong>Sanitized</strong>
+              <span class="metric-label">Community members</span>
+              <strong>122+</strong>
             </div>
           </div>
 
           <div class="beta-preview-body evidence-note">
             <p>
-              The public page shows proof of build and privacy controls. The working dataset, exact weekly outputs, and local dashboard files stay private.
+              Python and Excel/CSV workflows clean, dedupe, classify, extract skills, and produce weekly dashboard views.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="metrics-strip" aria-label="Project proof summary">
+      <section class="metrics-strip" aria-label="Current project metrics">
         <article>
-          <strong>Python</strong>
-          <span>Pipeline scripts</span>
+          <strong>1,301</strong>
+          <span>Reviewed analyst roles</span>
         </article>
         <article>
-          <strong>CSV</strong>
-          <span>Review workflow</span>
+          <strong>6</strong>
+          <span>GCC countries</span>
         </article>
         <article>
-          <strong>JS</strong>
-          <span>Private dashboard</span>
+          <strong>20</strong>
+          <span>Cities tracked</span>
         </article>
         <article>
-          <strong>GCC</strong>
-          <span>Market scope</span>
+          <strong>20</strong>
+          <span>Role categories</span>
         </article>
         <article>
-          <strong>Skills</strong>
-          <span>Taxonomy mapping</span>
+          <strong>31</strong>
+          <span>Tracked skills</span>
         </article>
         <article>
-          <strong>Privacy</strong>
-          <span>Public boundary</span>
+          <strong>1,293</strong>
+          <span>Skill recommendations</span>
         </article>
         <article>
-          <strong>Beta</strong>
-          <span>Selective access</span>
+          <strong>122+</strong>
+          <span>Community members</span>
         </article>
       </section>
 
-      <section class="dashboard-shot" id="proof" aria-labelledby="proof-title">
+      <section class="dashboard-shot" aria-labelledby="dashboard-shot-title">
         <div class="dashboard-shot-copy">
-          <p class="eyebrow">Recruiter proof</p>
-          <h2 id="proof-title">A sanitized view of the system, not the private dashboard.</h2>
+          <p class="eyebrow">Dashboard overview</p>
+          <h2 id="dashboard-shot-title">Dashboard output from the May 29 market read.</h2>
           <p>
-            The image and sample below prove the project structure: pipeline, review fields, aggregate outputs, and privacy handling. They do not expose private market-read data.
+            The private dashboard converts reviewed roles into aggregate city, country, role, skill, and recommendation views for weekly market updates.
           </p>
         </div>
-        <div class="proof-grid" aria-label="Public proof files">
+        <div class="proof-grid" aria-label="May 29 public proof">
           <article>
-            <span>Build proof</span>
-            <strong>Sanitized dashboard image</strong>
-            <p>Shows the type of aggregate dashboard produced without publishing the private weekly numbers.</p>
+            <span>Market read date</span>
+            <strong>May 29, 2026</strong>
           </article>
           <article>
-            <span>Sample proof</span>
-            <strong>Synthetic schema sample</strong>
-            <p>Shows the retained public fields using made-up rows, not real postings or employers.</p>
+            <span>Data freshness</span>
+            <strong>674 fresh roles</strong>
+            <p>0-30 day posting window, plus 336 recent, 19 older, and 272 unknown-date roles.</p>
           </article>
           <article>
-            <span>Access boundary</span>
-            <strong>Private by default</strong>
-            <p class="proof-note">No source data, job links, company names, descriptions, provider payloads, or contact fields are public.</p>
+            <span>Anonymized sample</span>
+            <strong>Anonymized sample</strong>
+            <p class="proof-note">Company names, source domains, links, descriptions, and contact fields are removed.</p>
             <div class="proof-actions">
               <a class="proof-link" href="public-sample.html">View sample table</a>
               <a class="proof-link proof-link-secondary" href="public-sample-may29.csv" download>Download CSV</a>
@@ -125,84 +124,106 @@
         </div>
         <figure class="dashboard-shot-frame">
           <img
-            src="assets/dashboard-overview.png?v=20260529-recruiter-proof"
-            alt="Sanitized GCC Analyst Market Tracker proof image showing a private pipeline and aggregate dashboard workflow."
+            src="assets/dashboard-overview.png?v=20260529-market-read"
+            alt="GCC Analyst Market Tracker dashboard summary showing 1,301 reviewed roles across 6 countries, 20 cities, and 31 tracked skills."
           >
-          <figcaption>Sanitized proof image. The working dashboard and exact market-read outputs remain private.</figcaption>
+          <figcaption>Public summary image from the May 29, 2026 aggregate build: 1,301 reviewed roles, 6 GCC countries, 20 cities, and 31 tracked skills.</figcaption>
         </figure>
       </section>
 
-      <section class="section" aria-labelledby="proof-details-title">
+      <section class="section market-update" id="market-update" aria-labelledby="market-update-title">
         <div class="section-heading">
-          <p class="eyebrow">What this proves</p>
-          <h2 id="proof-details-title">Enough to show the work is real, without publishing the private dataset.</h2>
+          <p class="eyebrow">Weekly market update</p>
+          <h2 id="market-update-title">May 29, 2026 market read.</h2>
+          <p>
+            This week covers 1,301 reviewed analyst roles across 6 GCC countries, 20 cities, 20 role categories, and 31 tracked skills.
+          </p>
         </div>
+
         <div class="update-grid">
           <article>
-            <h3>Pipeline</h3>
+            <h3>Countries</h3>
             <ol>
-              <li><span>Fetch batch records</span><strong>Private</strong></li>
-              <li><span>Normalize fields</span><strong>Python</strong></li>
-              <li><span>Deduplicate records</span><strong>CSV</strong></li>
-              <li><span>Review relevance</span><strong>Rules</strong></li>
-              <li><span>Build aggregates</span><strong>Local</strong></li>
+              <li><span>United Arab Emirates</span><strong>673</strong></li>
+              <li><span>Saudi Arabia</span><strong>454</strong></li>
+              <li><span>Qatar</span><strong>82</strong></li>
+              <li><span>Oman</span><strong>37</strong></li>
+              <li><span>Bahrain</span><strong>32</strong></li>
+              <li><span>Kuwait</span><strong>23</strong></li>
             </ol>
           </article>
           <article>
-            <h3>Dashboard</h3>
+            <h3>Cities</h3>
             <ol>
-              <li><span>Country views</span><strong>Aggregate</strong></li>
-              <li><span>City views</span><strong>Aggregate</strong></li>
-              <li><span>Role views</span><strong>Aggregate</strong></li>
-              <li><span>Skill views</span><strong>Aggregate</strong></li>
-              <li><span>Quality checks</span><strong>Local</strong></li>
+              <li><span>Dubai</span><strong>344</strong></li>
+              <li><span>Abu Dhabi</span><strong>255</strong></li>
+              <li><span>Riyadh</span><strong>216</strong></li>
+              <li><span>Jeddah</span><strong>100</strong></li>
+              <li><span>Dammam</span><strong>91</strong></li>
+              <li><span>Doha</span><strong>62</strong></li>
             </ol>
           </article>
           <article>
-            <h3>Public limits</h3>
+            <h3>Named role categories</h3>
             <ol>
-              <li><span>No raw rows</span><strong>Hidden</strong></li>
-              <li><span>No companies</span><strong>Removed</strong></li>
-              <li><span>No job links</span><strong>Removed</strong></li>
-              <li><span>No descriptions</span><strong>Removed</strong></li>
-              <li><span>No contact fields</span><strong>Removed</strong></li>
+              <li><span>Data Analyst</span><strong>275</strong></li>
+              <li><span>Business Analyst</span><strong>196</strong></li>
+              <li><span>Financial Analyst</span><strong>143</strong></li>
+              <li><span>Data Scientist / analyst-adjacent</span><strong>123</strong></li>
+              <li><span>Operations Analyst</span><strong>75</strong></li>
+              <li><span>BI Analyst</span><strong>52</strong></li>
             </ol>
           </article>
           <article>
-            <h3>Recruiter review</h3>
+            <h3>Skills</h3>
             <ol>
-              <li><span>Project overview</span><strong>Public</strong></li>
-              <li><span>Sanitized image</span><strong>Public</strong></li>
-              <li><span>Synthetic sample</span><strong>Public</strong></li>
-              <li><span>Private demo</span><strong>By access</strong></li>
-              <li><span>Source files</span><strong>Private</strong></li>
+              <li><span>Data Visualization</span><strong>313</strong></li>
+              <li><span>SQL</span><strong>283</strong></li>
+              <li><span>Excel</span><strong>279</strong></li>
+              <li><span>Power BI</span><strong>206</strong></li>
+              <li><span>Python</span><strong>194</strong></li>
+              <li><span>Statistics</span><strong>179</strong></li>
+              <li><span>Tableau</span><strong>159</strong></li>
+              <li><span>Forecasting</span><strong>139</strong></li>
+              <li><span>Machine Learning</span><strong>116</strong></li>
+              <li><span>Agile</span><strong>62</strong></li>
             </ol>
           </article>
+        </div>
+
+        <div class="quick-read">
+          <h3>Quick read</h3>
+          <p>
+            Dubai and Abu Dhabi still carry most of the UAE count in this dataset, while Riyadh remains the strongest Saudi cluster. The skill mix is steady: SQL, Excel, visualization, Power BI, Python, and statistics keep appearing together. Finance and forecasting also remain useful, especially for roles that sit between reporting, planning, and business decision support.
+          </p>
+          <p>
+            This is sampled career intelligence, not a complete count of every analyst job in the Gulf. The value is in repeated patterns across weekly reads, not in treating one week as the whole market.
+          </p>
         </div>
       </section>
 
-      <section class="section" id="method" aria-labelledby="method-title">
+      <section class="section" id="insights" aria-labelledby="insights-title">
         <div class="section-heading">
-          <p class="eyebrow">Method</p>
-          <h2 id="method-title">A CSV-first data workflow for directional career intelligence.</h2>
+          <p class="eyebrow">Insights</p>
+          <h2 id="insights-title">Built for people deciding what to learn, where to focus, and which analyst path to target.</h2>
         </div>
         <div class="info-grid">
           <article>
-            <h3>Role direction</h3>
+            <h3>Role demand</h3>
             <p>
-              The private workflow compares analyst and analyst-adjacent roles across data, business, BI, finance, operations, product, and strategy paths.
+              Compare analyst-adjacent role categories such as Data Analyst, Business Analyst, BI Analyst, Financial Analyst, Operations Analyst, Product Analyst, and related data roles.
             </p>
           </article>
           <article>
-            <h3>Market focus</h3>
+            <h3>City focus</h3>
             <p>
-              The private dashboard groups reviewed records by geography, role category, skills, freshness, salary availability, and confidence.
+              Track where demand appears concentrated across core Gulf cities, with wider country coverage being tested before it becomes a main dashboard view.
             </p>
           </article>
           <article>
-            <h3>Skill planning</h3>
+            <h3>Skill direction</h3>
             <p>
-              Repeated skill mentions are mapped into a taxonomy so learners can see which tools and concepts appear together.
+              See recurring skill mentions such as analytics tools, spreadsheets, querying, visualization, statistics, forecasting, and business systems.
             </p>
           </article>
         </div>
@@ -211,50 +232,114 @@
       <section class="section compact" id="build" aria-labelledby="build-title">
         <div class="section-heading">
           <p class="eyebrow">What I built</p>
-          <h2 id="build-title">A private pipeline that turns messy job-market samples into dashboard-ready views.</h2>
+          <h2 id="build-title">A data pipeline that turns messy job-market samples into dashboard-ready views.</h2>
         </div>
         <div class="build-grid">
           <article>
             <span class="step-number">01</span>
             <h3>Cleaned and normalized data</h3>
-            <p>Built Python and CSV workflows to standardize sampled analyst-role records into comparable fields.</p>
+            <p>Built Python and Excel/CSV workflows to standardize sampled analyst-role records into comparable fields.</p>
           </article>
           <article>
             <span class="step-number">02</span>
             <h3>Deduped and classified roles</h3>
-            <p>Grouped likely repeated records and categorized analyst roles across practical career paths.</p>
+            <p>Grouped duplicate records and categorized analyst roles across data, business, BI, finance, operations, product, and strategy paths.</p>
           </article>
           <article>
             <span class="step-number">03</span>
-            <h3>Mapped skill patterns</h3>
-            <p>Tracked recurring tool, analytics, business, and finance skills in a private recommendation workflow.</p>
+            <h3>Extracted skill indicators</h3>
+            <p>Tracked recurring skill mentions such as SQL, Excel, Power BI, Python, Tableau, forecasting, statistics, and data visualization.</p>
           </article>
           <article>
             <span class="step-number">04</span>
-            <h3>Kept public output limited</h3>
-            <p>The public site shows sanitized proof only. Detailed files and market-read outputs stay private.</p>
+            <h3>Weekly trend summaries</h3>
+            <p>Produced aggregate outputs across city demand, role demand, skill demand, freshness, and confidence metrics for weekly market briefs.</p>
           </article>
         </div>
       </section>
 
-      <section class="section compact" id="privacy" aria-labelledby="privacy-title">
+      <section class="section" id="recommender" aria-labelledby="recommender-title">
         <div class="section-heading">
-          <p class="eyebrow">Privacy boundary</p>
-          <h2 id="privacy-title">The public site is proof of work, not access to the working dataset.</h2>
+          <p class="eyebrow">Recommendation engine</p>
+          <h2 id="recommender-title">Role-and-market skill recommendations from reviewed roles.</h2>
+        </div>
+        <div class="recommendation-panel">
+          <div>
+            <span class="label">Example target</span>
+            <h3>Data Analyst - Dubai</h3>
+            <p>
+              The recommendation engine ranks skills by how often they appear in matching reviewed analyst roles for the selected role and market.
+            </p>
+          </div>
+          <ol class="skill-ranking" aria-label="Example recommended skills">
+            <li>
+              <span class="rank">01</span>
+              <span class="skill-name">SQL</span>
+              <span class="skill-note">Core querying</span>
+            </li>
+            <li>
+              <span class="rank">02</span>
+              <span class="skill-name">Data Visualization</span>
+              <span class="skill-note">Dashboard communication</span>
+            </li>
+            <li>
+              <span class="rank">03</span>
+              <span class="skill-name">Power BI</span>
+              <span class="skill-note">BI reporting</span>
+            </li>
+            <li>
+              <span class="rank">04</span>
+              <span class="skill-name">Excel</span>
+              <span class="skill-note">Spreadsheet analysis</span>
+            </li>
+            <li>
+              <span class="rank">05</span>
+              <span class="skill-name">Tableau</span>
+              <span class="skill-note">Visualization tooling</span>
+            </li>
+            <li>
+              <span class="rank">06</span>
+              <span class="skill-name">Python</span>
+              <span class="skill-note">Analysis scripting</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section compact" id="method" aria-labelledby="method-title">
+        <div class="section-heading">
+          <p class="eyebrow">Method</p>
+          <h2 id="method-title">Directional career intelligence, not a job board.</h2>
         </div>
         <div class="scope-list">
           <div>
-            <span class="label">Public</span>
-            <p>Project description, sanitized proof image, synthetic sample schema, and methodology overview.</p>
+            <span class="label">What it measures</span>
+            <p>Reviewed market records are cleaned, deduplicated where possible, categorized, and converted into aggregate weekly views.</p>
           </div>
           <div>
-            <span class="label">Private</span>
-            <p>Raw source files, normalized records, review files, exact market-read outputs, and the working dashboard.</p>
+            <span class="label">What it avoids</span>
+            <p>The public page shows summary-level outputs and examples rather than raw records.</p>
           </div>
           <div>
-            <span class="label">Access</span>
-            <p>Detailed review is shared selectively and directly, not through the public website.</p>
+            <span class="label">How to read it</span>
+            <p>Counts represent reviewed roles in this dataset, not a complete count of every open job in the Gulf. Patterns are strongest when they repeat across market reads.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="section" id="beta" aria-labelledby="beta-title">
+        <div class="section-heading">
+          <p class="eyebrow">Beta</p>
+          <h2 id="beta-title">122+ members following weekly Gulf analyst-market updates.</h2>
+        </div>
+        <div class="beta-panel">
+          <div class="beta-stat">
+            <strong>122+</strong>
+            <span>Community members</span>
+          </div>
+          <p>
+            The beta community gives the project a visible audience for weekly market briefs, feedback, chart requests, and career-intelligence discussion across the Gulf.
+          </p>
         </div>
       </section>
     </main>
@@ -262,6 +347,6 @@
     <footer>
       <p>GCC Analyst Market Tracker is a private beta aggregate analytics project. It is directional career intelligence, not legal, hiring, or investment advice.</p>
     </footer>
-    <script src="site.js?v=20260529-recruiter-proof"></script>
+    <script src="site.js?v=20260524-recommendation-list"></script>
   </body>
 </html>
