@@ -1,26 +1,7 @@
-"sample_row","market_read_date","country","city","role_category","seniority","skills_detected","skill_count","posting_month","freshness_bucket","salary_listed","review_scope","confidence_score"
-"sample_001","2026-05-29","United Arab Emirates","Unknown","Credit Analyst","Not specified","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","65"
-"sample_002","2026-05-29","Saudi Arabia","Unknown","Business Analyst","Senior","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","65"
-"sample_003","2026-05-29","Qatar","Unknown","Data Analyst","Junior","Data Visualization; Excel; SQL; Statistics","4","2026-05","fresh_0_30_days","no","single_record","70"
-"sample_004","2026-05-29","Oman","Muscat","BI Analyst","Not specified","AWS; Azure; Data Visualization; Forecasting; GCP; Power BI; Qlik; SQL; Statistics; Tableau","10","2026-05","fresh_0_30_days","no","single_record","70"
-"sample_005","2026-05-29","Bahrain","Manama","BI Analyst","Not specified","Data Visualization; ETL; Looker; Power BI; SQL; Statistics; Tableau","7","2026-05","fresh_0_30_days","no","single_record","80"
-"sample_006","2026-05-29","Kuwait","Hawally","Other Analyst","Not specified","Not detected in retained fields","0","Unknown","unknown","no","single_record","45"
-"sample_007","2026-05-29","United Arab Emirates","Unknown","Data Analyst","Not specified","Data Visualization; Python; SQL","3","2026-05","fresh_0_30_days","no","single_record","75"
-"sample_008","2026-05-29","Saudi Arabia","Unknown","Business Analyst","Not specified","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","65"
-"sample_009","2026-05-29","Qatar","Unknown","Data Analyst","Not specified","Data Visualization; Python; SQL; Statistics; Tableau","5","2026-05","fresh_0_30_days","no","single_record","70"
-"sample_010","2026-05-29","Oman","Muscat","Business Analyst","Not specified","Data Visualization; Excel; Power BI; SQL; Tableau","5","2026-04","recent_31_90_days","no","single_record","70"
-"sample_011","2026-05-29","Bahrain","Manama","Business Analyst","Junior","SQL","1","2026-04","recent_31_90_days","no","single_record","80"
-"sample_012","2026-05-29","Kuwait","Kuwait City","Business Analyst","Not specified","Not detected in retained fields","0","2026-04","recent_31_90_days","no","single_record","75"
-"sample_013","2026-05-29","United Arab Emirates","Unknown","Data Analyst","Not specified","Data Visualization; Excel; Power BI; Python; SAP; SQL","6","2026-05","fresh_0_30_days","no","single_record","70"
-"sample_014","2026-05-29","Saudi Arabia","Unknown","Business Analyst","Not specified","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","65"
-"sample_015","2026-05-29","Qatar","Unknown","Data Analyst","Not specified","Python; SQL; Statistics; Tableau","4","2026-05","fresh_0_30_days","no","single_record","70"
-"sample_016","2026-05-29","Oman","Muscat","Business Analyst","Not specified","Agile","1","2026-04","recent_31_90_days","no","single_record","70"
-"sample_017","2026-05-29","Bahrain","Manama","Business Analyst","Not specified","SQL; Statistics","2","2026-04","recent_31_90_days","no","single_record","65"
-"sample_018","2026-05-29","Kuwait","Kuwait City","Business Analyst","Not specified","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","75"
-"sample_019","2026-05-29","United Arab Emirates","Unknown","Data Scientist/Analyst-adjacent","Senior","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","65"
-"sample_020","2026-05-29","Saudi Arabia","Unknown","Data Scientist/Analyst-adjacent","Not specified","Machine Learning","1","2026-05","fresh_0_30_days","no","single_record","75"
-"sample_021","2026-05-29","Qatar","Unknown","Data Analyst","Not specified","Agile; Data Visualization; Machine Learning; Power BI; Python; SQL; Statistics; Tableau","8","2026-05","fresh_0_30_days","no","single_record","70"
-"sample_022","2026-05-29","Oman","Muscat","Business Analyst","Senior","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","70"
-"sample_023","2026-05-29","Bahrain","Manama","Business Analyst","Not specified","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","75"
-"sample_024","2026-05-29","Kuwait","Kuwait City","Business Analyst","Not specified","Not detected in retained fields","0","2026-05","fresh_0_30_days","no","single_record","75"
-"sample_025","2026-05-29","United Arab Emirates","Unknown","FP&A Analyst","Not specified","Not detected in retained fields","0","2026-04","recent_31_90_days","yes","single_record","65"
+sample_row,record_type,market_area,city_group,role_family,seniority_band,skills_shown,skill_count,date_bucket,freshness,salary_listed,review_scope,confidence_band
+sample_001,synthetic_example,GCC market,Core city,Data Analyst,Entry to mid,SQL; Excel; Data Visualization,3,Recent month,Fresh,no,schema_demo,High
+sample_002,synthetic_example,GCC market,Capital city,Business Analyst,Mid,Requirements; Excel; Power BI,3,Recent month,Fresh,no,schema_demo,Medium
+sample_003,synthetic_example,GCC market,Business hub,Financial Analyst,Mid,Forecasting; Excel; Financial Modeling,3,Recent month,Fresh,yes,schema_demo,High
+sample_004,synthetic_example,GCC market,Core city,BI Analyst,Mid to senior,Power BI; SQL; Dashboarding,3,Recent quarter,Recent,no,schema_demo,High
+sample_005,synthetic_example,GCC market,Secondary city,Operations Analyst,Entry to mid,Excel; Reporting; Process Analysis,3,Recent quarter,Recent,no,schema_demo,Medium
+sample_006,synthetic_example,GCC market,Core city,Data Scientist / analyst-adjacent,Mid to senior,Python; Statistics; Machine Learning,3,Unknown month,Unknown,no,schema_demo,Medium
