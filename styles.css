@@ -111,7 +111,6 @@ nav a:focus::after {
   overflow: hidden;
   min-height: calc(86vh - 72px);
   padding: clamp(48px, 7vw, 92px) clamp(20px, 5vw, 72px);
-  border-bottom: 1px solid var(--line);
   background: var(--green-paper);
 }
 
