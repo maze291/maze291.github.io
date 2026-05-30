@@ -489,6 +489,20 @@ h3 {
   font-size: 14px;
 }
 
+.powerbi-section {
+  background: var(--white);
+}
+
+.powerbi-section .section-heading p:last-child {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.powerbi-actions {
+  margin-top: 18px;
+}
+
 .section {
   padding: clamp(54px, 7vw, 96px) clamp(20px, 5vw, 72px);
   border-bottom: 1px solid var(--line);
