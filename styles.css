@@ -327,6 +327,7 @@ h3 {
 .metrics-strip {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-top: 0;
   border-bottom: 1px solid var(--line);
   background: var(--white);
 }
