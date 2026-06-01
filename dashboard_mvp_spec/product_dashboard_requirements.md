@@ -1,4 +1,4 @@
-# GCC Analyst Market Tracker Dashboard Requirements
+# GCC Analyst Market Tracker Private Dashboard Requirements
 
 ## Dashboard Objective
 
