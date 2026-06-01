@@ -507,6 +507,90 @@ h3 {
   margin-top: 18px;
 }
 
+.sql-section {
+  background: #f9fbfd;
+}
+
+.sql-section .section-heading p:last-child {
+  max-width: 980px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.workflow-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1240px;
+  margin-bottom: 18px;
+}
+
+.workflow-rail article,
+.sql-proof-grid article {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.workflow-rail article {
+  min-height: 250px;
+  padding: 24px;
+}
+
+.workflow-rail .step-number {
+  margin-bottom: 28px;
+}
+
+.workflow-rail p,
+.sql-proof-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.sql-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1180px;
+  margin-bottom: 22px;
+}
+
+.sql-proof-grid article {
+  min-height: 158px;
+  padding: 22px;
+}
+
+.sql-proof-grid span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.sql-proof-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.sql-actions {
+  align-items: center;
+}
+
+.sql-section h2,
+.sql-section h3,
+.sql-section p,
+.sql-proof-grid strong {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
 .section {
   padding: clamp(54px, 7vw, 96px) clamp(20px, 5vw, 72px);
   border-bottom: 1px solid var(--line);
@@ -910,6 +994,8 @@ footer p {
   .info-grid,
   .update-grid,
   .build-grid,
+  .workflow-rail,
+  .sql-proof-grid,
   .recommendation-panel {
     grid-template-columns: 1fr;
   }
@@ -986,5 +1072,28 @@ footer p {
 
   .skill-note {
     grid-column: 2;
+  }
+
+  .sql-section .section-heading h2 {
+    font-size: 26px;
+    line-height: 1.12;
+  }
+
+  .sql-section .section-heading p:last-child {
+    font-size: 16px;
+  }
+
+  .workflow-rail article,
+  .sql-proof-grid article {
+    min-height: auto;
+  }
+
+  .sql-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sql-actions .button-link {
+    width: 100%;
   }
 }

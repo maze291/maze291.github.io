@@ -1,0 +1,11 @@
+snapshot_date,country,city,confidence_band,sample_signal_count,avg_confidence_score,min_confidence_score,max_confidence_score
+2026-05-22,Bahrain,Manama,high,2,80.0,80,80
+2026-05-22,Bahrain,Manama,low,2,65.0,65,65
+2026-05-22,Bahrain,Manama,medium,3,71.7,70,75
+2026-05-22,Saudi Arabia,Unknown,low,1,65.0,65,65
+2026-05-22,United Arab Emirates,Abu Dhabi,high,8,83.1,80,85
+2026-05-22,United Arab Emirates,Abu Dhabi,medium,4,73.8,70,75
+2026-05-22,United Arab Emirates,Dubai,high,1,85.0,85,85
+2026-05-22,United Arab Emirates,Dubai,medium,2,75.0,75,75
+2026-05-22,United Arab Emirates,Unknown,low,1,65.0,65,65
+2026-05-22,United Arab Emirates,Unknown,medium,1,75.0,75,75
