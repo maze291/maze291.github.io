@@ -1,4 +1,4 @@
 snapshot_date,freshness_bucket,sample_signal_count,sample_share,avg_confidence_score
-2026-05-22,fresh_0_30_days,16,64.0,79.7
-2026-05-22,unknown,5,20.0,68.0
-2026-05-22,recent_31_90_days,4,16.0,72.5
+2026-05-29,fresh_0_30_days,18,72.0,70.6
+2026-05-29,recent_31_90_days,6,24.0,70.8
+2026-05-29,unknown,1,4.0,45.0

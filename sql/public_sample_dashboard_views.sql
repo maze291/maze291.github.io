@@ -8,7 +8,7 @@ CREATE OR REPLACE VIEW public_demo.stg_public_sample AS
 WITH raw AS (
     SELECT
         NULLIF(TRIM(sample_row), '') AS sample_row,
-        TRY_CAST(NULLIF(snapshot_date, '') AS DATE) AS snapshot_date,
+        TRY_CAST(NULLIF(market_read_date, '') AS DATE) AS snapshot_date,
         NULLIF(TRIM(country), '') AS country,
         NULLIF(TRIM(city), '') AS city,
         NULLIF(TRIM(role_category), '') AS role_category,
@@ -18,10 +18,10 @@ WITH raw AS (
         NULLIF(TRIM(posting_month), '') AS posting_month,
         NULLIF(TRIM(freshness_bucket), '') AS freshness_bucket,
         CASE WHEN LOWER(COALESCE(salary_listed, '')) = 'yes' THEN TRUE ELSE FALSE END AS salary_listed,
-        NULLIF(TRIM(observation_type), '') AS observation_type,
+        NULLIF(TRIM(review_scope), '') AS observation_type,
         TRY_CAST(NULLIF(confidence_score, '') AS INTEGER) AS confidence_score
     FROM read_csv_auto(
-        'docs/public-sample-may22.csv',
+        'public-sample-may29.csv',
         header = true,
         all_varchar = true
     )

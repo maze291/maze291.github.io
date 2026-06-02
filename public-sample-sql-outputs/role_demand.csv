@@ -1,19 +1,8 @@
 snapshot_date,role_category,sample_signal_count,sample_share,skill_bearing_sample_count,avg_confidence_score,fresh_sample_count
-2026-05-22,Business Analyst,7,28.0,4,70.0,3
-2026-05-22,BI Analyst,2,8.0,2,82.5,2
-2026-05-22,Commercial Analyst,1,4.0,0,75.0,1
-2026-05-22,Credit Analyst,1,4.0,0,75.0,0
-2026-05-22,Data Analyst,1,4.0,1,75.0,1
-2026-05-22,Data Scientist/Analyst-adjacent,1,4.0,1,85.0,1
-2026-05-22,FP&A Analyst,1,4.0,1,80.0,1
-2026-05-22,Financial Analyst,1,4.0,1,85.0,1
-2026-05-22,Investment Analyst,1,4.0,1,85.0,1
-2026-05-22,Marketing Analyst,1,4.0,0,75.0,0
-2026-05-22,Operations Analyst,1,4.0,1,65.0,0
-2026-05-22,Pricing Analyst,1,4.0,1,70.0,0
-2026-05-22,Product Analyst,1,4.0,1,85.0,1
-2026-05-22,Reporting Analyst,1,4.0,1,80.0,1
-2026-05-22,Research Analyst,1,4.0,1,85.0,1
-2026-05-22,Risk Analyst,1,4.0,1,80.0,1
-2026-05-22,Strategy Analyst,1,4.0,0,75.0,0
-2026-05-22,Supply Chain Analyst,1,4.0,0,75.0,1
+2026-05-29,Business Analyst,12,48.0,4,70.8,7
+2026-05-29,Data Analyst,6,24.0,6,70.8,6
+2026-05-29,BI Analyst,2,8.0,2,75.0,2
+2026-05-29,Data Scientist/Analyst-adjacent,2,8.0,1,70.0,2
+2026-05-29,Credit Analyst,1,4.0,0,65.0,1
+2026-05-29,FP&A Analyst,1,4.0,0,65.0,0
+2026-05-29,Other Analyst,1,4.0,0,45.0,0

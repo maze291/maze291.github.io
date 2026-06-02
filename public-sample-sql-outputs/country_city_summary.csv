@@ -1,6 +1,8 @@
 snapshot_date,country,city,sample_signal_count,role_category_count,skill_bearing_sample_count,fresh_sample_count,fresh_sample_share,salary_listed_count,salary_coverage_pct,avg_confidence_score
-2026-05-22,United Arab Emirates,Abu Dhabi,12,12,9,9,75.0,1,8.3,80.0
-2026-05-22,Bahrain,Manama,7,2,5,3,42.9,0,0.0,72.1
-2026-05-22,United Arab Emirates,Dubai,3,3,1,2,66.7,0,0.0,78.3
-2026-05-22,United Arab Emirates,Unknown,2,2,2,1,50.0,0,0.0,70.0
-2026-05-22,Saudi Arabia,Unknown,1,1,0,1,100.0,0,0.0,65.0
+2026-05-29,United Arab Emirates,Unknown,5,4,2,4,80.0,1,20.0,68.0
+2026-05-29,Bahrain,Manama,4,2,3,2,50.0,0,0.0,75.0
+2026-05-29,Oman,Muscat,4,2,3,2,50.0,0,0.0,70.0
+2026-05-29,Qatar,Unknown,4,1,4,4,100.0,0,0.0,70.0
+2026-05-29,Saudi Arabia,Unknown,4,2,1,4,100.0,0,0.0,67.5
+2026-05-29,Kuwait,Kuwait City,3,1,0,2,66.7,0,0.0,75.0
+2026-05-29,Kuwait,Hawally,1,1,0,0,0.0,0,0.0,45.0
