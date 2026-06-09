@@ -122,53 +122,6 @@
         </div>
       </section>
 
-      <section class="section sql-section" id="sql-layer" aria-labelledby="sql-title">
-        <div class="section-heading">
-          <p class="eyebrow">SQL proof layer</p>
-          <h2 id="sql-title">Public demo runs the same SQL as my private on publishable data.</h2>
-          <p>
-            Current project in two: the full data stays local, and a small anonymized sample proves the SQL actually works unless clear permission is granted.
-          </p>
-        </div>
-
-        <div class="workflow-rail" aria-label="Product and data analytics workflow">
-          <article>
-            <span class="step-number">01</span>
-            <h3>What stays private.</h3>
-            <p>The full cleaned CSVs live on my machine and feed the real views: country and role demand, skill demand, posting freshness, a confidence score, and the recommendations.</p>
-          </article>
-          <article>
-            <span class="step-number">02</span>
-            <h3>Why it's all SQL.</h3>
-            <p>Every metric is a DuckDB view. Open the SQL and see exactly how each figure was calculated.</p>
-          </article>
-          <article>
-            <span class="step-number">03</span>
-            <h3>The public sample.</h3>
-            <p>25 anonymized rows run through the views.</p>
-          </article>
-          <article>
-            <span class="step-number">04</span>
-            <h3>What you see on the site.</h3>
-            <p>The Power BI screenshots come from these counts and averages.</p>
-          </article>
-        </div>
-
-        <div class="sql-proof-grid" aria-label="Public SQL proof metrics">
-          <article>
-            <span>SQL views</span>
-            <strong>6 public views</strong>
-            <p>Country/city, role demand, skill demand, freshness, confidence, and sample readiness.</p>
-          </article>
-        </div>
-
-        <div class="proof-actions sql-actions">
-          <a class="button-link" href="sql/public_sample_dashboard_views.sql">View DuckDB SQL</a>
-          <a class="button-link button-link-secondary" href="public-sample-sql-outputs/sample_readiness.csv">View readiness output</a>
-          <a class="proof-link" href="public-sample-sql-outputs/skill_demand.csv">Skill demand CSV</a>
-        </div>
-      </section>
-
       <section class="section" id="insights" aria-labelledby="insights-title">
         <div class="section-heading">
           <p class="eyebrow">Insights</p>
