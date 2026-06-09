@@ -122,63 +122,6 @@
         </div>
       </section>
 
-      <section class="section sql-section" id="sql-layer" aria-labelledby="sql-title">
-        <div class="section-heading">
-          <p class="eyebrow">SQL reporting layer</p>
-          <h2 id="sql-title">Public-safe DuckDB views mirror the private dashboard logic.</h2>
-          <p>
-            The product analytics workflow separates private reviewed data from public proof: Python prepares clean CSVs, DuckDB defines dashboard metrics in SQL, and the public sample demonstrates the same logic without exposing source records.
-          </p>
-        </div>
-
-        <div class="workflow-rail" aria-label="Product and data analytics workflow">
-          <article>
-            <span class="step-number">01</span>
-            <h3>Private reviewed data</h3>
-            <p>Full derived CSVs stay local and feed the private reporting views for country trends, role demand, skill demand, freshness, confidence, and recommendations.</p>
-          </article>
-          <article>
-            <span class="step-number">02</span>
-            <h3>DuckDB metric views</h3>
-            <p>SQL views define the reporting layer so dashboard metrics are reproducible, inspectable, and separated from cleaning logic.</p>
-          </article>
-          <article>
-            <span class="step-number">03</span>
-            <h3>Public-safe mirror</h3>
-            <p>An anonymized sample runs through matching DuckDB views for country/city summaries, role demand, skill demand, freshness, and confidence.</p>
-          </article>
-          <article>
-            <span class="step-number">04</span>
-            <h3>Dashboard evidence</h3>
-            <p>Aggregate SQL outputs support the public Power BI proof while keeping company names, source links, descriptions, and contact details out of the site.</p>
-          </article>
-        </div>
-
-        <div class="sql-proof-grid" aria-label="Public SQL proof metrics">
-          <article>
-            <span>Public demo scope</span>
-            <strong>25 anonymized rows</strong>
-            <p>Demonstrates schema, metric logic, dashboard views, and privacy-safe reporting patterns.</p>
-          </article>
-          <article>
-            <span>SQL views</span>
-            <strong>6 public views</strong>
-            <p>Country/city, role demand, skill demand, freshness, confidence, and sample readiness.</p>
-          </article>
-          <article>
-            <span>Quality readout</span>
-            <strong>76.2 avg confidence</strong>
-            <p>Sample readiness also tracks unknown city, unknown freshness, skill-detection gaps, and salary coverage.</p>
-          </article>
-        </div>
-
-        <div class="proof-actions sql-actions">
-          <a class="button-link" href="sql/public_sample_dashboard_views.sql">View DuckDB SQL</a>
-          <a class="button-link button-link-secondary" href="public-sample-sql-outputs/sample_readiness.csv">View readiness output</a>
-          <a class="proof-link" href="public-sample-sql-outputs/skill_demand.csv">Skill demand CSV</a>
-        </div>
-      </section>
-
       <section class="section" id="insights" aria-labelledby="insights-title">
         <div class="section-heading">
           <p class="eyebrow">Insights</p>
