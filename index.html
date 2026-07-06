@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="GCC Analyst Market Tracker is an independent data analytics project tracking aggregate analyst-role demand patterns across the Gulf."
+      content="GCC Analyst Market Tracker is an independent aggregate labor-market intelligence project for analyst roles across the Gulf."
     >
     <title>GCC Analyst Market Tracker</title>
-    <link rel="stylesheet" href="styles.css?v=20260530-no-metric-top-line">
+    <link rel="stylesheet" href="styles.css?v=20260706-baseline-status">
   </head>
   <body>
     <header class="site-header">
@@ -17,6 +17,7 @@
         <span>Analyst Market Tracker</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#proof">Proof</a>
         <a href="#insights">Insights</a>
         <a href="#method">Method</a>
         <a href="#builder">Built by</a>
@@ -26,28 +27,29 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <h1 id="hero-title">Analyst career intelligence across the Gulf.</h1>
+          <p class="eyebrow">May 2026 baseline built</p>
+          <h1 id="hero-title">Analyst market intelligence across the Gulf.</h1>
           <p class="hero-text">
-            GCC Analyst Market Tracker turns market data into regular reads on analyst roles, hiring cities, skill demand, and career paths across the Gulf.
+            GCC Analyst Market Tracker turns sampled analyst job postings into reviewed, deduplicated, aggregate-only signals about cities, roles, skills, and market direction.
           </p>
         </div>
 
         <div class="dashboard-preview evidence-preview" aria-label="Project evidence preview">
           <div class="preview-header">
             <div>
-              <h2>Built from reviewed analyst roles.</h2>
+              <h2>Built from a frozen measurement layer.</h2>
             </div>
-            <span class="period">June 4 refresh</span>
+            <span class="period">May 29 cutoff</span>
           </div>
 
           <div class="metric-grid evidence-grid">
             <div class="metric">
-              <span class="metric-label">Reviewed roles</span>
+              <span class="metric-label">Reviewed signals</span>
               <strong>1,304</strong>
             </div>
             <div class="metric">
-              <span class="metric-label">Skill recommendations</span>
-              <strong>~1,400</strong>
+              <span class="metric-label">Countries</span>
+              <strong>6</strong>
             </div>
             <div class="metric">
               <span class="metric-label">Tracked skills</span>
@@ -57,25 +59,25 @@
 
           <div class="beta-preview-body evidence-note">
             <p>
-              Python and Excel/CSV workflows clean, dedupe, classify, extract skills, and produce aggregated views.
+              The May 2026 baseline report layer now exists locally. Public issue #1 is still gated on source-permission emails to JSearch / OpenWeb Ninja and Careerjet.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="dashboard-shot" aria-labelledby="dashboard-shot-title">
+      <section class="dashboard-shot" id="proof" aria-labelledby="proof-title">
         <div class="dashboard-shot-copy">
-          <p class="eyebrow">Dashboard overview</p>
-          <h2 id="dashboard-shot-title">Dashboard output from the June 4 refresh.</h2>
+          <p class="eyebrow">Proof layer</p>
+          <h2 id="proof-title">A report system, not a job board.</h2>
           <p>
-            The dashboard converts reviewed roles into aggregate city, country, role, skill, and recommendation views. Public outputs are aggregate-only; raw data and sources stay private by design.
+            The project now has a frozen metric contract, named SQL queries, a local frozen input, and a report sidecar that records the signal IDs and provenance used for each issue. Raw samples and job-level derived rows stay private; public outputs remain aggregate-only.
           </p>
         </div>
-        <div class="proof-grid" aria-label="June 4 public proof">
+        <div class="proof-grid" aria-label="Current public proof">
           <article>
-            <span>Refresh date</span>
-            <strong>June 4, 2026</strong>
-            <p>Extraction refresh of the May 29 market read.</p>
+            <span>Baseline issue</span>
+            <strong>May 2026</strong>
+            <p>Generated locally from the existing reviewed dataset, with a May 29, 2026 data cutoff.</p>
           </article>
           <article>
             <span>Current scope</span>
@@ -83,9 +85,9 @@
             <p>Reviewed analyst-role signals across 6 GCC countries, 20 named cities, and 20 role categories.</p>
           </article>
           <article>
-            <span>Anonymized sample</span>
-            <strong>Anonymized sample</strong>
-            <p class="proof-note">Company names, source domains, links, descriptions, and contact fields are removed.</p>
+            <span>Public release gate</span>
+            <strong>Permission first</strong>
+            <p class="proof-note">Issue #1 should not be publicly released until the source-permission emails are sent.</p>
             <div class="proof-actions">
               <a class="proof-link" href="public-sample.html">View sample table</a>
               <a class="proof-link proof-link-secondary" href="public-sample-may29.csv" download>Download CSV</a>
@@ -104,7 +106,7 @@
       <section class="section powerbi-section" id="powerbi" aria-labelledby="powerbi-title">
         <div class="section-heading">
           <p class="eyebrow">Power BI dashboard</p>
-          <h2 id="powerbi-title">Power BI Public Sample Dashboard.</h2>
+          <h2 id="powerbi-title">Power BI public sample dashboard.</h2>
           <p>
             Built from the anonymized public sample to demonstrate KPI reporting, role/skill segmentation, freshness analysis, confidence scoring, and privacy-aware dashboard design.
           </p>
@@ -153,7 +155,7 @@
       <section class="section compact" id="build" aria-labelledby="build-title">
         <div class="section-heading">
           <p class="eyebrow">What I built</p>
-          <h2 id="build-title">A pipeline that transforms messy market data into a powerful dashboard for advanced job-market analysis, trend identification, and data-driven insights.</h2>
+          <h2 id="build-title">A pipeline that transforms messy market data into a measured, traceable analyst-market intelligence layer.</h2>
         </div>
         <div class="build-grid">
           <article>
@@ -173,8 +175,8 @@
           </article>
           <article>
             <span class="step-number">04</span>
-            <h3>Market-read summaries</h3>
-            <p>Produced aggregate outputs across city demand, role demand, skill demand, freshness, and confidence metrics for recurring market briefs.</p>
+            <h3>Governed report layer</h3>
+            <p>Added metric definitions, named SQL queries, source caveats, and report sidecars so published numbers are traceable and caveated.</p>
           </article>
         </div>
       </section>
@@ -235,15 +237,19 @@
         <div class="scope-list">
           <div>
             <span class="label">What it measures</span>
-            <p>Reviewed market records are cleaned, deduplicated where possible, categorized, and converted into aggregate dashboard views.</p>
+            <p>Reviewed market records are cleaned, deduplicated where possible, categorized, and converted into aggregate dashboard and report views.</p>
           </div>
           <div>
             <span class="label">What it avoids</span>
-            <p>Public outputs are aggregate-only; raw data and sources stay private by design.</p>
+            <p>Public outputs are aggregate-only. Raw data, job-level rows, source record IDs, listing links, descriptions, and contact fields stay private.</p>
           </div>
           <div>
             <span class="label">How to read it</span>
-            <p>Counts represent reviewed roles in this dataset, not a complete count of every open job in the Gulf. Patterns are strongest when they repeat across market reads.</p>
+            <p>Counts represent reviewed roles in this dataset, not a complete count of every open job in the Gulf. UAE and Saudi Arabia are stronger reads; smaller GCC markets remain discovery baselines.</p>
+          </div>
+          <div>
+            <span class="label">Launch gate</span>
+            <p>The May 2026 baseline report should be published only after source-permission emails to JSearch / OpenWeb Ninja and Careerjet are sent.</p>
           </div>
         </div>
       </section>
