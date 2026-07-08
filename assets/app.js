@@ -158,7 +158,7 @@
       /* KPI 1: signals matched */
       countUp($('#kpi-matched'), denom, 700);
       $('#kpi-matched-sub').innerHTML = denom >= 100
-        ? '<span class="dot"></span> Human-reviewed sample'
+        ? '<span class="dot"></span> Reviewed sample'
         : '<span class="dot" style="background:var(--warn)"></span> Small sample — read with care';
 
       /* KPI 2: avg detected skills per posting within selection */
