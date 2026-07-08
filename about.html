@@ -1,93 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — gulfgeek</title>
-<meta name="description" content="What gulfgeek is, how the pipeline works, and where the data comes from. GCC analyst job market intelligence built on human-reviewed signals and frozen metric definitions.">
-<meta property="og:title" content="About gulfgeek">
-<meta property="og:description" content="How gulfgeek collects, reviews and measures GCC analyst hiring signals.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://gulfgeek.co/about.html">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — gulfgeek</title>
+  <meta name="description"
+    content="What gulfgeek is, how the pipeline works, and where the data comes from. GCC analyst job market intelligence built on human-reviewed signals and frozen metric definitions.">
+  <meta property="og:title" content="About gulfgeek">
+  <meta property="og:description" content="How gulfgeek collects, reviews and measures GCC analyst hiring signals.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gulfgeek.co/about.html">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
 
-<nav class="nav">
-  <div class="nav-inner">
-    <a class="wordmark" href="index.html">gulfgeek<span class="tld">.co</span></a>
-    <span class="nav-count" data-navcount></span>
-    <div class="nav-links">
-      <a href="skills.html">Skills</a>
-      <a href="jobs.html">Roles</a>
-      <a href="research.html">Research</a>
-      <a href="about.html" class="active">About</a>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">gulfgeek<span class="tld">.co</span></a>
+      <span class="nav-count" data-navcount></span>
+      <div class="nav-links">
+        <a href="skills.html">Skills</a>
+        <a href="jobs.html">Roles</a>
+        <a href="research.html">Research</a>
+        <a href="about.html" class="active">About</a>
+      </div>
+      <button class="hamburger" aria-label="Open menu">☰</button>
     </div>
-    <button class="hamburger" aria-label="Open menu">☰</button>
-  </div>
-</nav>
-<div class="mobile-menu">
-  <div class="mm-head">
-    <a class="wordmark" href="index.html">gulfgeek<span class="tld">.co</span></a>
-    <button class="mm-close" aria-label="Close menu">✕</button>
-  </div>
-  <a href="skills.html">Skills</a>
-  <a href="jobs.html">Roles</a>
-  <a href="research.html">Research</a>
-  <a href="about.html">About</a>
-</div>
-
-<main class="prose" style="padding-top:56px">
-
-  <div class="stat-strip">
-    <div class="kpi">
-      <h3>Signals reviewed</h3>
-      <div class="big" data-countup="1304">0</div>
-      <div class="sub">every one human-reviewed</div>
+  </nav>
+  <div class="mobile-menu">
+    <div class="mm-head">
+      <a class="wordmark" href="index.html">gulfgeek<span class="tld">.co</span></a>
+      <button class="mm-close" aria-label="Close menu">✕</button>
     </div>
-    <div class="kpi">
-      <h3>Countries · cities</h3>
-      <div class="big">6 · 20</div>
-      <div class="sub">full GCC coverage</div>
+    <a href="skills.html">Skills</a>
+    <a href="jobs.html">Roles</a>
+    <a href="research.html">Research</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <main class="prose" style="padding-top:56px">
+
+    <div class="stat-strip">
+      <div class="kpi">
+        <h3>Signals reviewed</h3>
+        <div class="big" data-countup="1304">0</div>
+        <div class="sub">every one human-reviewed</div>
+      </div>
+      <div class="kpi">
+        <h3>Countries · cities</h3>
+        <div class="big">6 · 20</div>
+        <div class="sub">full GCC coverage</div>
+      </div>
+      <div class="kpi">
+        <h3>Skills tracked</h3>
+        <div class="big">40</div>
+        <div class="sub">fixed taxonomy, frozen definitions</div>
+      </div>
     </div>
-    <div class="kpi">
-      <h3>Skills tracked</h3>
-      <div class="big">40</div>
-      <div class="sub">fixed taxonomy, frozen definitions</div>
+
+    <div class="notice">
+      <h3>⚠ Data coverage notice</h3>
+      <p>This is the May 2026 baseline — a single reviewed snapshot (collected 8–29 May 2026), not yet a rolling daily
+        feed. Salary appears in only 6.6% of signals, so no salary benchmark is published. 37% of signals carry no
+        detectable skill due to sparse retained posting text and are excluded from skill percentages. Individual job
+        listings are not shown pending source redistribution permissions.</p>
     </div>
-  </div>
 
-  <div class="notice">
-    <h3>⚠ Data coverage notice</h3>
-    <p>This is the May 2026 baseline — a single reviewed snapshot (collected 8–29 May 2026), not yet a rolling daily feed. Salary appears in only 6.6% of signals, so no salary benchmark is published. 37% of signals carry no detectable skill due to sparse retained posting text and are excluded from skill percentages. Individual job listings are not shown pending source redistribution permissions. Each limitation is disclosed rather than papered over — that's the point.</p>
-  </div>
+    <h2>What is gulfgeek?</h2>
+    <p>I'm Azeem, a computer science student and self-proclaimed gulf geek. I noticed something that was bothering:
+      analysts in the Gulf, people whose whole job is data, had almost no real data about their own job market. Which
+      skills do GCC employers
+      actually ask for? Is it different in Riyadh than in Dubai? How much of what you see on job boards is
+      staffing-agency noise? So I built gulfgeek: a GCC job market intelligence platform that measures what employers
+      actually want.</p>
 
-  <h2>What is gulfgeek?</h2>
-  <p>I'm Azeem — a computer science student and a gulf geek. I noticed something ironic: analysts in the Gulf, people whose whole job is data, had almost no real data about their own job market. Which skills do GCC employers actually ask for? Is it different in Riyadh than in Dubai? How much of what you see on job boards is staffing-agency noise? So I built gulfgeek: a GCC job market intelligence platform that measures what employers actually want. No opinions. Just reviewed data.</p>
+    <h2>How it works</h2>
+    <p>The pipeline collects analyst job postings across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, then
+      deduplicates and normalizes them into unique signals. Each signal is matched against a fixed 40-skill taxonomy and
+      a canonical set of 20 analyst role categories, and every signal in the published dataset was reviewed before
+      inclusion. Metric definitions are frozen: the same rule computes every number in every snapshot, so figures stay
+      comparable as new months land.</p>
+    <p>One finding that shaped the methodology: among the top 10 employers by posting volume, 3 are staffing and
+      recruitment firms — and repost networks can make a single vacancy look like many. Deduplication and employer-type
+      classification exist precisely because raw job-board counts mislead.</p>
 
-  <h2>How it works</h2>
-  <p>The pipeline collects analyst job postings across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, then deduplicates and normalizes them into unique signals. Each signal is matched against a fixed 40-skill taxonomy and a canonical set of 20 analyst role categories, and every signal in the published dataset was human-reviewed before inclusion. Metric definitions are frozen: the same rule computes every number in every snapshot, so figures stay comparable as new months land.</p>
-  <p>One finding that shaped the methodology: among the top 10 employers by posting volume, 3 are staffing and recruitment firms — and repost networks can make a single vacancy look like many. Deduplication and employer-type classification exist precisely because raw job-board counts mislead.</p>
+    <h2>Data source</h2>
+    <p>Signals are collected through licensed job-search APIs - the current baseline draws 832 signals via JSearch and
+      472 via Careerjet. Only aggregate statistics are published: no raw posting links, no descriptions, no contact
+      details, and no individual listings currently.</p>
 
-  <h2>Data source</h2>
-  <p>Signals are collected through licensed job-search APIs — the current baseline draws 832 signals via JSearch and 472 via Careerjet. Only aggregate statistics are published: no raw posting links, no descriptions, no contact details, and no individual listings until source redistribution permissions are confirmed.</p>
+    <h2>What "reviewed" means</h2>
+    <p>Reviewed means it was verified. Signals that survive review are unique, in-scope analyst roles within the
+      six GCC countries. The dataset also carries per-signal confidence scores (baseline average: 75/100) and freshness
+      buckets - 42% of baseline signals were posted within 30 days of the cutoff. Anything the pipeline can't verify is
+      labelled unknown.</p>
 
-  <h2>What "reviewed" means</h2>
-  <p>Reviewed means a human looked at it. Signals that survive review are unique, in-scope analyst roles within the six GCC countries. The dataset also carries per-signal confidence scores (baseline average: 75/100) and freshness buckets — 42% of baseline signals were posted within 30 days of the cutoff. Anything the pipeline can't verify is labelled unknown rather than guessed.</p>
+    <div class="about-cta">
+      <!-- TODO: point href at the beehiiv subscribe URL -->
+      <a class="btn btn-primary" href="research.html">GCC hiring signals, monthly →</a>
+      <a href="https://github.com/maze291" style="color:var(--text-dim)">GitHub</a>
+    </div>
 
-  <div class="about-cta">
-    <!-- TODO: point href at the beehiiv subscribe URL -->
-    <a class="btn btn-primary" href="research.html">GCC hiring signals, monthly →</a>
-    <a href="https://github.com/maze291" style="color:var(--text-dim)">GitHub</a>
-  </div>
+  </main>
 
-</main>
+  <footer class="footer">
+    <span>© 2026 gulfgeek</span>
+    <span>May 2026 baseline · cutoff 2026-05-29</span>
+  </footer>
 
-<footer class="footer">
-  <span>© 2026 gulfgeek</span>
-  <span>May 2026 baseline · cutoff 2026-05-29</span>
-</footer>
-
-<script src="assets/app.js"></script>
+  <script src="assets/app.js"></script>
 </body>
+
 </html>
