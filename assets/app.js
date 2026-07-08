@@ -47,9 +47,12 @@
   }
 
   /* ---------- dropdown chips ---------- */
-  function closeAllMenus() { $all('.chip.open').forEach(function (c) { c.classList.remove('open'); }); }
+  function closeAllMenus() {
+    $all('.chip.open').forEach(function (c) { c.classList.remove('open'); });
+    $all('.menu.is-open').forEach(function (m) { m.classList.remove('is-open'); });
+  }
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('.chip')) closeAllMenus();
+    if (!e.target.closest('.chip') && !e.target.closest('.menu')) closeAllMenus();
   });
   window.addEventListener('scroll', closeAllMenus, { passive: true });
 
@@ -57,6 +60,7 @@
     var chip = $('#' + id);
     if (!chip) return null;
     var btn = $('button.trigger', chip), menu = $('.menu', chip);
+    document.body.appendChild(menu);
     var state = { value: 'ALL', label: label };
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -65,7 +69,8 @@
       if (!was) {
         chip.classList.add('open');
         var r = btn.getBoundingClientRect();
-        menu.style.top = (r.bottom + 8) + 'px';
+        menu.classList.add('is-open');
+        menu.style.top = (r.bottom + 4) + 'px';
         menu.style.left = Math.min(r.left, window.innerWidth - 250) + 'px';
       }
     });
@@ -83,6 +88,7 @@
     function set(v) {
       state.value = v;
       chip.classList.remove('open');
+      menu.classList.remove('is-open');
       chip.classList.toggle('on', v !== 'ALL');
       $('.chip-label', btn).textContent = v === 'ALL' ? label : v;
       render();

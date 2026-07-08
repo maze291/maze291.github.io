@@ -78,8 +78,9 @@ button{font-family:inherit;cursor:pointer}
 .chip.on > button{border-color:var(--accent);color:var(--accent)}
 .chip > button .car{font-size:.7rem;color:var(--text-dim)}
 .chip-label{position:static}
-.menu{position:fixed;top:auto;left:auto;min-width:230px;max-height:340px;overflow-y:auto;background:var(--bg-raise2);border:1px solid var(--line);border-radius:var(--radius);padding:6px;display:none;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.menu{position:fixed;top:auto;left:auto;min-width:230px;max-height:340px;overflow-y:auto;background:var(--bg-raise2);border:1px solid var(--line);border-radius:var(--radius);padding:6px;display:none;box-shadow:0 14px 40px rgba(0,0,0,.5);z-index:80}
 .chip.open .menu{display:block}
+.menu.is-open{display:block}
 .menu button{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;background:none;border:none;color:var(--text);padding:10px 14px;border-radius:8px;font-size:.92rem}
 .menu button:hover{background:var(--bg-raise)}
 .menu button .check{color:var(--accent)}
