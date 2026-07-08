@@ -51,6 +51,7 @@
   document.addEventListener('click', function (e) {
     if (!e.target.closest('.chip')) closeAllMenus();
   });
+  window.addEventListener('scroll', closeAllMenus, { passive: true });
 
   function buildChip(id, label, options, onChange) {
     var chip = $('#' + id);
@@ -61,7 +62,12 @@
       e.stopPropagation();
       var was = chip.classList.contains('open');
       closeAllMenus();
-      if (!was) chip.classList.add('open');
+      if (!was) {
+        chip.classList.add('open');
+        var r = btn.getBoundingClientRect();
+        menu.style.top = (r.bottom + 8) + 'px';
+        menu.style.left = Math.min(r.left, window.innerWidth - 250) + 'px';
+      }
     });
     function render() {
       menu.innerHTML = '';
