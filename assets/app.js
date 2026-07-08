@@ -56,7 +56,7 @@
   });
   window.addEventListener('scroll', closeAllMenus, { passive: true });
 
-  function buildChip(id, label, options, onChange) {
+  function buildChip(id, label, options, onChange, allLabel) {
     var chip = $('#' + id);
     if (!chip) return null;
     var btn = $('button.trigger', chip), menu = $('.menu', chip);
@@ -76,7 +76,7 @@
     });
     function render() {
       menu.innerHTML = '';
-      var all = el('button', null, '<span>All ' + label.toLowerCase() + '</span>' + (state.value === 'ALL' ? '<span class="check">✓</span>' : ''));
+      var all = el('button', null, '<span>' + (allLabel || ('All ' + label.toLowerCase())) + '</span>' + (state.value === 'ALL' ? '<span class="check">✓</span>' : ''));
       all.addEventListener('click', function () { set('ALL'); });
       menu.appendChild(all);
       options.forEach(function (o) {
@@ -105,9 +105,9 @@
     var roles = uniq(rows.map(function (r) { return r.r; })).sort();
     var cats = uniq(rows.map(function (r) { return r.cat; })).sort();
 
-    var fCountry = buildChip('f-country', 'Country', countries, update);
-    var fRole = buildChip('f-role', 'Role', roles, update);
-    var fCat = buildChip('f-cat', 'Skill category', cats, update);
+    var fCountry = buildChip('f-country', 'Country', countries, update, 'All Countries');
+    var fRole = buildChip('f-role', 'Role', roles, update, 'All Roles');
+    var fCat = buildChip('f-cat', 'Skill category', cats, update, 'All Categories');
 
     var tip = null;
     function showTip(anchor, skill, pct, count, segTotal, cat, conf) {
