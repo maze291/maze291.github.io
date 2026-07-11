@@ -25,43 +25,84 @@
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  /* The verified value remains in HTML; JS progressively enhances it with a slow visual count-up. */
-  function countUp(node, target) {
-    if (!node) return;
-    if (node._countTimer) clearTimeout(node._countTimer);
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduced) { node.textContent = fmt(target); return; }
+  /* One live value follows same-tab navigation and resets on a browser refresh. */
+  function initCounts(meta) {
+    var nodes = $all('[data-livecount], [data-navcount]');
+    if (!nodes.length) return;
 
-    var current = 0;
-    var visual = document.createElement('span');
-    visual.className = 'countup-value';
-    visual.setAttribute('aria-hidden', 'true');
-    visual.textContent = '0';
-    node.textContent = '';
-    node.setAttribute('aria-label', fmt(target));
-    node.appendChild(visual);
+    var storageKey = 'gulfgeek-live-count';
+    var target = meta.total;
+    var navEntries = performance.getEntriesByType ? performance.getEntriesByType('navigation') : [];
+    var isReload = navEntries.length ? navEntries[0].type === 'reload' :
+      (performance.navigation && performance.navigation.type === 1);
 
-    function step() {
-      current = Math.min(target, current + randomInt(3, 10));
-      visual.textContent = fmt(current);
-      visual.classList.remove('count-tick');
-      void visual.offsetWidth;
-      visual.classList.add('count-tick');
-      if (current < target) {
-        node._countTimer = setTimeout(step, randomInt(4000, 7000));
+    function readStored() {
+      try {
+        var stored = parseInt(sessionStorage.getItem(storageKey), 10);
+        return isNaN(stored) ? 0 : Math.min(stored, target);
+      } catch (e) {
+        return 0;
       }
     }
 
-    node._countTimer = setTimeout(step, randomInt(4000, 7000));
-  }
+    function writeStored(value) {
+      try { sessionStorage.setItem(storageKey, String(value)); } catch (e) { /* storage unavailable */ }
+    }
 
-  function initCounts(meta) {
-    $all('[data-countup]').forEach(function (n) {
-      countUp(n, parseInt(n.getAttribute('data-countup') || meta.total, 10));
+    if (isReload) {
+      try { sessionStorage.removeItem(storageKey); } catch (e) { /* storage unavailable */ }
+    }
+
+    var current = readStored();
+    var views = nodes.map(function (node) {
+      var suffix = node.hasAttribute('data-navcount') ? ' signals analyzed' : '';
+      var visual = document.createElement('span');
+      visual.className = 'countup-value';
+      visual.setAttribute('aria-hidden', 'true');
+      node.textContent = '';
+      node.appendChild(visual);
+      if (suffix) node.appendChild(document.createTextNode(suffix));
+      return { node: node, visual: visual, suffix: suffix };
     });
-    $all('[data-navcount]').forEach(function (n) {
-      n.textContent = fmt(meta.total) + ' signals analyzed';
+
+    function render(animate) {
+      views.forEach(function (view) {
+        view.visual.textContent = fmt(current);
+        view.node.setAttribute('aria-label', fmt(current) + view.suffix);
+        if (animate) {
+          view.visual.classList.remove('count-tick');
+          void view.visual.offsetWidth;
+          view.visual.classList.add('count-tick');
+        }
+      });
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      current = target;
+      writeStored(current);
+      render(false);
+      return;
+    }
+
+    writeStored(current);
+    render(false);
+
+    function step() {
+      current = Math.min(target, current + randomInt(3, 10));
+      writeStored(current);
+      render(true);
+      if (current < target) window._gulfgeekCountTimer = setTimeout(step, randomInt(4000, 7000));
+    }
+
+    window.addEventListener('pageshow', function () {
+      var stored = readStored();
+      if (stored !== current) {
+        current = stored;
+        render(false);
+      }
     });
+
+    window._gulfgeekCountTimer = setTimeout(step, randomInt(4000, 7000));
   }
 
   /* ---------- dropdown chips ---------- */
@@ -126,7 +167,6 @@
     var fCountry = buildChip('f-country', 'Country', countries, update, 'All Countries');
     var fRole = buildChip('f-role', 'Role', roles, update, 'All Roles');
     var fCat = buildChip('f-cat', 'Skill category', cats, update, 'All Categories');
-    var firstUpdate = true;
 
     var tip = null;
     function showTip(anchor, skill, pct, count, segTotal, cat, conf) {
@@ -176,14 +216,7 @@
 
       /* KPI 1: signals matched */
       var matched = $('#kpi-matched');
-      var isInitialMarketView = fCountry.value === 'ALL' && fRole.value === 'ALL' &&
-        fCat.value === 'ALL' && matched.getAttribute('data-countup') === String(denom);
-      if (!firstUpdate || !isInitialMarketView) {
-        if (matched._countTimer) clearTimeout(matched._countTimer);
-        matched.removeAttribute('aria-label');
-        matched.textContent = fmt(denom);
-      }
-      firstUpdate = false;
+      matched.textContent = fmt(denom);
       $('#kpi-matched-sub').innerHTML = denom >= 100
         ? '<span class="dot"></span> Reviewed sample'
         : '<span class="dot" style="background:var(--warn)"></span> Small sample: read with care';
