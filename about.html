@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — gulfgeek</title>
+  <title>About | gulfgeek</title>
   <meta name="description"
-    content="What gulfgeek is, how the pipeline works, and where the data comes from. GCC analyst job market intelligence built on reviewed signals and frozen metric definitions.">
+    content="How gulfgeek reviews, deduplicates and measures sampled GCC analyst hiring signals, including its coverage limits and public methodology.">
   <meta property="og:title" content="About gulfgeek">
   <meta property="og:description" content="How gulfgeek collects, reviews and measures GCC analyst hiring signals.">
   <meta property="og:type" content="website">
@@ -26,13 +26,13 @@
         <a href="research.html">Research</a>
         <a href="about.html" class="active">About</a>
       </div>
-      <button class="hamburger" aria-label="Open menu">☰</button>
+      <button class="hamburger" aria-label="Open menu"><span aria-hidden="true">☰</span></button>
     </div>
   </nav>
   <div class="mobile-menu">
     <div class="mm-head">
       <a class="wordmark" href="index.html">gulfgeek<span class="tld">.co</span></a>
-      <button class="mm-close" aria-label="Close menu">✕</button>
+      <button class="mm-close" aria-label="Close menu"><span aria-hidden="true">✕</span></button>
     </div>
     <a href="skills.html">Skills</a>
     <a href="jobs.html">Roles</a>
@@ -45,7 +45,7 @@
     <div class="stat-strip">
       <div class="kpi">
         <h3>Signals reviewed</h3>
-        <div class="big" data-countup="1304">0</div>
+        <div class="big" data-countup="1304">1,304</div>
         <div class="sub">every one reviewed</div>
       </div>
       <div class="kpi">
@@ -61,45 +61,48 @@
     </div>
 
     <div class="notice">
-      <h3>⚠ Data coverage notice</h3>
-      <p>This is the May 2026 baseline — a single reviewed snapshot (collected 8–29 May 2026), not yet a rolling daily
+      <h3><span aria-hidden="true">⚠</span> Data coverage notice</h3>
+      <p>This is the May 2026 baseline: a single reviewed snapshot collected from 8 to 29 May 2026, not a rolling daily
         feed. Salary appears in only 6.6% of signals, so no salary benchmark is published. 37% of signals carry no
-        detectable skill due to sparse retained posting text and are excluded from skill percentages. Individual job
-        listings are not shown pending source redistribution permissions.</p>
+        detectable skill due to sparse retained posting text and are excluded from skill percentages. Public pages
+        publish aggregate statistics and exclude individual job listings.</p>
     </div>
 
     <h2>What is gulfgeek?</h2>
-    <p>I'm Azeem, a computer science student. I noticed something that was bothering:
-      analysts in the Gulf, people whose whole job is data, had almost no real data about their own job market. Which
-      skills do GCC employers
-      actually ask for? Is it different in Riyadh than in Dubai? How much of what you see on job boards is
-      staffing-agency noise? So I built gulfgeek: a GCC job market intelligence platform that measures what employers
-      actually want.</p>
+    <p>I'm Mohammed Abdul Azeem, a computer science student and aspiring analyst in Dubai. While reviewing GCC job
+      postings, I found that the organizations appearing most often were not always the employers doing the hiring.
+      Staffing firms, repost networks and repeated listings could make demand look larger or more direct than it was.
+      I built gulfgeek to clean that sample, separate employer types and show candidates what the reviewed evidence
+      supports.</p>
 
     <h2>How it works</h2>
     <p>The pipeline collects analyst job postings across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman, then
       deduplicates and normalizes them into unique signals. Each signal is matched against a fixed 40-skill taxonomy and
       a canonical set of 20 analyst role categories, and every signal in the published dataset was reviewed before
-      inclusion. Metric definitions are frozen: the same rule computes every number in every snapshot, so figures stay
+      inclusion. Metric definitions are frozen. The same rule computes every number in every snapshot, so figures stay
       comparable as new months land.</p>
-    <p>One finding that shaped the methodology: among the top 10 employers by posting volume, 3 are staffing and
-      recruitment firms — and repost networks can make a single vacancy look like many. Deduplication and employer-type
-      classification exist precisely because raw job-board counts mislead.</p>
+    <p>One finding shaped the methodology: 3 of the 10 highest-volume canonical employer names were classified as
+      staffing or recruitment firms. Under the strict public definition, these are organizations that recruit or place
+      candidates for clients. Consultancies hiring people onto their own payroll count as direct employers. Repost
+      networks can also make one vacancy look like many, so employer classification and deduplication are part of every
+      published read.</p>
 
     <h2>Data source</h2>
-    <p>Signals are collected through licensed job-search APIs - the current baseline draws 832 signals via JSearch and
+    <p>Signals are collected through licensed job-search APIs. The current baseline draws 832 signals via JSearch and
       472 via Careerjet. Only aggregate statistics are published: no raw posting links, no descriptions, no contact
-      details, and no individual listings currently.</p>
+      details, and no individual listings.</p>
 
     <h2>What "reviewed" means</h2>
-    <p>Reviewed means it was verified. Signals that survive review are unique, in-scope analyst roles within the
-      six GCC countries. The dataset also carries per-signal confidence scores (baseline average: 75/100) and freshness
-      buckets - 42% of baseline signals were posted within 30 days of the cutoff. Anything the pipeline can't verify is
-      labelled unknown.</p>
+    <p>A reviewed signal has passed the pipeline's inclusion checks for an in-scope analyst title and one of the six GCC
+      countries. The review records title relevance, canonical role, location and company presence, duplicate status,
+      restricted-source status and whether private contact information is present. Rows outside the role scope,
+      outside the target geography or identified as duplicates are excluded from published aggregates. Included rows
+      receive a confidence score and freshness bucket; values that cannot be verified remain labelled unknown.</p>
 
     <div class="about-cta">
-      <!-- TODO: point href at the beehiiv subscribe URL -->
-      <a class="btn btn-primary" href="research.html">GCC hiring signals, monthly →</a>
+      <a class="btn btn-primary" href="may-2026.html">Read the May snapshot →</a>
+      <a href="mailto:maze291@outlook.com" style="color:var(--text-dim)">Email</a>
+      <a href="https://www.linkedin.com/in/mohammed-abdul-azeem-4379a630a/" style="color:var(--text-dim)">LinkedIn</a>
       <a href="https://github.com/maze291" style="color:var(--text-dim)">GitHub</a>
     </div>
 
@@ -107,6 +110,8 @@
 
   <footer class="footer">
     <span>© 2026 gulfgeek</span>
+    <a href="mailto:maze291@outlook.com">Email</a>
+    <a href="https://www.linkedin.com/in/mohammed-abdul-azeem-4379a630a/">LinkedIn</a>
     <span>May 2026 baseline · cutoff 2026-05-29</span>
   </footer>
 

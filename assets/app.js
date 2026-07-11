@@ -1,4 +1,4 @@
-/* gulfgeek app.js — no dependencies */
+/* gulfgeek app.js: no dependencies */
 (function () {
   'use strict';
   var PATH = location.pathname;
@@ -21,20 +21,29 @@
     }
   }
 
-  /* count-up animation for any element with [data-countup] */
-  function countUp(node, target, ms) {
-    ms = ms || 1100;
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  /* The verified value remains in HTML; JS adds a deliberately slow visual count-up. */
+  function countUp(node, target) {
+    if (!node) return;
+    if (node._countTimer) clearTimeout(node._countTimer);
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) { node.textContent = fmt(target); return; }
-    var start = null;
-    function step(t) {
-      if (!start) start = t;
-      var p = Math.min((t - start) / ms, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      node.textContent = fmt(Math.round(target * eased));
-      if (p < 1) requestAnimationFrame(step);
+
+    var current = Math.max(0, target - randomInt(32, 54));
+    node.textContent = fmt(current);
+
+    function step() {
+      current = Math.min(target, current + randomInt(3, 10));
+      node.textContent = fmt(current);
+      if (current < target) {
+        node._countTimer = setTimeout(step, randomInt(4000, 7000));
+      }
     }
-    requestAnimationFrame(step);
+
+    node._countTimer = setTimeout(step, randomInt(4000, 7000));
   }
 
   function initCounts(meta) {
@@ -108,6 +117,7 @@
     var fCountry = buildChip('f-country', 'Country', countries, update, 'All Countries');
     var fRole = buildChip('f-role', 'Role', roles, update, 'All Roles');
     var fCat = buildChip('f-cat', 'Skill category', cats, update, 'All Categories');
+    var firstUpdate = true;
 
     var tip = null;
     function showTip(anchor, skill, pct, count, segTotal, cat, conf) {
@@ -156,17 +166,24 @@
       var allSkillMentions = sel.reduce(function (a, r) { return a + r.n; }, 0);
 
       /* KPI 1: signals matched */
-      countUp($('#kpi-matched'), denom, 700);
+      var matched = $('#kpi-matched');
+      var isInitialMarketView = fCountry.value === 'ALL' && fRole.value === 'ALL' &&
+        fCat.value === 'ALL' && matched.getAttribute('data-countup') === String(denom);
+      if (!firstUpdate || !isInitialMarketView) {
+        if (matched._countTimer) clearTimeout(matched._countTimer);
+        matched.textContent = fmt(denom);
+      }
+      firstUpdate = false;
       $('#kpi-matched-sub').innerHTML = denom >= 100
         ? '<span class="dot"></span> Reviewed sample'
-        : '<span class="dot" style="background:var(--warn)"></span> Small sample — read with care';
+        : '<span class="dot" style="background:var(--warn)"></span> Small sample: read with care';
 
       /* KPI 2: avg detected skills per posting within selection */
       var avg = denom ? (allSkillMentions / denom) : 0;
       $('#kpi-avg').textContent = avg.toFixed(1);
       var delta = avg - meta.avgSkills;
       $('#kpi-avg-sub').textContent = (fCountry.value === 'ALL' && fRole.value === 'ALL')
-        ? '— across all reviewed signals'
+        ? 'Across all reviewed signals'
         : (delta >= 0 ? '↑ ' : '↓ ') + Math.abs(delta).toFixed(1) + ' vs. all-market average';
 
       /* KPI 3: freshness (role- or country-scoped where possible) */
@@ -230,13 +247,21 @@
     var roles = DATA.roles.slice().sort(function (a, b) { return b.n - a.n; });
     var pillWrap = $('#pills'), detail = $('#role-detail');
     roles.forEach(function (r) {
-      var p = el('button', 'pill', r.role + '<span class="cnt">' + fmt(r.n) + '</span>');
-      p.addEventListener('click', function () {
+      var p = $all('[data-role]', pillWrap).filter(function (item) {
+        return item.getAttribute('data-role') === r.role;
+      })[0];
+      if (!p) {
+        p = el('a', 'pill', r.role + '<span class="cnt">' + fmt(r.n) + '</span>');
+        p.href = '#role-detail';
+        p.setAttribute('data-role', r.role);
+        pillWrap.appendChild(p);
+      }
+      p.addEventListener('click', function (event) {
+        event.preventDefault();
         $all('.pill', pillWrap).forEach(function (x) { x.classList.remove('on'); });
         p.classList.add('on');
         renderRole(r);
       });
-      pillWrap.appendChild(p);
     });
 
     function miniRows(container, items, denom) {

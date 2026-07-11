@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Top skills in GCC analyst job postings — gulfgeek</title>
+  <title>Top skills in GCC analyst job postings | gulfgeek</title>
   <meta name="description"
     content="The skills GCC employers ask for in analyst roles, from reviewed job signals. Filter by country, role and skill category across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain and Oman.">
   <meta property="og:title" content="Top skills in GCC analyst job postings">
   <meta property="og:description"
-    content="SQL, Excel, Power BI and more — demand computed from reviewed signals across 6 GCC countries.">
+    content="SQL, Excel, Power BI and more, measured across reviewed signals from 6 GCC countries.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gulfgeek.co/skills.html">
   <link rel="stylesheet" href="assets/style.css">
@@ -27,13 +27,13 @@
         <a href="research.html">Research</a>
         <a href="about.html">About</a>
       </div>
-      <button class="hamburger" aria-label="Open menu">☰</button>
+      <button class="hamburger" aria-label="Open menu"><span aria-hidden="true">☰</span></button>
     </div>
   </nav>
   <div class="mobile-menu">
     <div class="mm-head">
       <a class="wordmark" href="index.html">gulfgeek<span class="tld">.co</span></a>
-      <button class="mm-close" aria-label="Close menu">✕</button>
+      <button class="mm-close" aria-label="Close menu"><span aria-hidden="true">✕</span></button>
     </div>
     <a href="skills.html">Skills</a>
     <a href="jobs.html">Roles</a>
@@ -65,55 +65,54 @@
     <div class="kpis">
       <div class="kpi">
         <h3>Signals matched</h3>
-        <div class="big" id="kpi-matched">0</div>
+        <div class="big" id="kpi-matched" data-countup="1304">1,304</div>
         <div class="sub" id="kpi-matched-sub"><span class="dot"></span> Reviewed sample</div>
       </div>
       <div class="kpi">
         <h3>Avg detected skills per posting</h3>
-        <div class="big" id="kpi-avg">–</div>
-        <div class="sub" id="kpi-avg-sub"></div>
+        <div class="big" id="kpi-avg">2.3</div>
+        <div class="sub" id="kpi-avg-sub">Across all reviewed signals</div>
       </div>
       <div class="kpi">
         <h3>Freshness</h3>
-        <div class="big" id="kpi-fresh">–</div>
-        <div class="sub" id="kpi-fresh-sub"></div>
+        <div class="big" id="kpi-fresh">42%</div>
+        <div class="sub" id="kpi-fresh-sub">Posted within 30 days of cutoff</div>
       </div>
     </div>
 
     <div class="chart-head">
       <h2>Top skills in job postings</h2>
-      <button class="info-btn" id="metric-info" aria-label="How this metric works">i</button>
+      <button class="info-btn" id="metric-info" aria-label="How this metric works"><span aria-hidden="true">i</span></button>
     </div>
 
     <div class="bars" id="bars"></div>
 
-    <p class="chart-note">37% of reviewed signals carry no detectable skill (sparse posting text) and are excluded from
-      skill percentages. Tap ⓘ for the full definition.</p>
+    <p class="chart-note">37% of reviewed signals carry no detectable skill and are excluded from skill percentages.
+      "Data Visualization" matches generic language such as dashboards, visual analytics and business intelligence;
+      it is not the sum of Power BI and Tableau. Open the metric information for the full definition.</p>
 
     <div class="promo">
-      <div class="emoji">📬</div>
+      <div class="emoji" aria-hidden="true">📊</div>
       <div>
-        <h3>Want this in your inbox, monthly?</h3>
-        <p>GCC Analyst Hiring Signals - the free monthly report built from this exact dataset.</p>
-        <a class="btn btn-primary" href="research.html">Read the latest →</a>
+        <h3>Read the baseline behind this chart</h3>
+        <p>The May 2026 snapshot puts the headline skills, country coverage and data limitations in one place.</p>
+        <a class="btn btn-primary" href="may-2026.html">Read the snapshot →</a>
       </div>
-      <button class="x" aria-label="Dismiss">✕</button>
+      <button class="x" aria-label="Dismiss"><span aria-hidden="true">✕</span></button>
     </div>
   </main>
 
   <div class="modal-wrap" id="metric-modal" role="dialog" aria-modal="true" aria-label="How this metric works">
     <div class="modal">
-      <button class="x" aria-label="Close">✕</button>
+      <button class="x" aria-label="Close"><span aria-hidden="true">✕</span></button>
       <h3>How this metric works</h3>
       <p>Skill demand is the share of reviewed signals in the current selection whose posting text matches a skill from
-        a fixed 40-skill taxonomy. Every signal in the dataset was reviewed before inclusion, and metric
-        definitions are frozen — the same rule computes this number in every snapshot, so figures stay comparable over
-        time.</p>
+        a fixed 40-skill taxonomy. The selection uses the published methodology and all-signal denominator.</p>
       <h3>How to read it</h3>
       <p>A skill at 22% appears in 22 of every 100 reviewed postings in the selection. Higher means more employers are
-        actively asking for it. Small selections (under 100 signals) are flagged — read those with care.</p>
+        asking for it. Selections under 100 signals are flagged and should be read with care.</p>
       <h3>Coverage</h3>
-      <p>May 2026 baseline: 1,304 unique reviewed signals across 6 GCC countries and 20 named cities, collected 8–29 May
+      <p>May 2026 baseline: 1,304 unique reviewed signals across 6 GCC countries and 20 named cities, collected from 8 to 29 May
         2026 from licensed job-search APIs. 37% of signals carry no detectable skill due to sparse retained text and are
         excluded from skill percentages. Salary appears in only 6.6% of signals, so no salary benchmark is published.
       </p>
@@ -123,6 +122,8 @@
   <footer class="footer">
     <span>© 2026 gulfgeek</span>
     <a href="about.html">methodology</a>
+    <a href="mailto:maze291@outlook.com">Email</a>
+    <a href="https://www.linkedin.com/in/mohammed-abdul-azeem-4379a630a/">LinkedIn</a>
     <span>May 2026 baseline · cutoff 2026-05-29</span>
   </footer>
 
