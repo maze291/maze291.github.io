@@ -25,19 +25,28 @@
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  /* The verified value remains in HTML; JS adds a deliberately slow visual count-up. */
+  /* The verified value remains in HTML; JS progressively enhances it with a slow visual count-up. */
   function countUp(node, target) {
     if (!node) return;
     if (node._countTimer) clearTimeout(node._countTimer);
     var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (reduced) { node.textContent = fmt(target); return; }
 
-    var current = Math.max(0, target - randomInt(32, 54));
-    node.textContent = fmt(current);
+    var current = 0;
+    var visual = document.createElement('span');
+    visual.className = 'countup-value';
+    visual.setAttribute('aria-hidden', 'true');
+    visual.textContent = '0';
+    node.textContent = '';
+    node.setAttribute('aria-label', fmt(target));
+    node.appendChild(visual);
 
     function step() {
       current = Math.min(target, current + randomInt(3, 10));
-      node.textContent = fmt(current);
+      visual.textContent = fmt(current);
+      visual.classList.remove('count-tick');
+      void visual.offsetWidth;
+      visual.classList.add('count-tick');
       if (current < target) {
         node._countTimer = setTimeout(step, randomInt(4000, 7000));
       }
@@ -171,6 +180,7 @@
         fCat.value === 'ALL' && matched.getAttribute('data-countup') === String(denom);
       if (!firstUpdate || !isInitialMarketView) {
         if (matched._countTimer) clearTimeout(matched._countTimer);
+        matched.removeAttribute('aria-label');
         matched.textContent = fmt(denom);
       }
       firstUpdate = false;

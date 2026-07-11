@@ -58,6 +58,13 @@ button{font-family:inherit;cursor:pointer}
 .trust-line{color:var(--text-dim);font-size:clamp(.85rem,2.5vw,1.05rem);display:flex;flex-wrap:wrap;gap:10px;justify-content:center;font-family:var(--mono)}
 .trust-line .sep{color:var(--text-faint)}
 .trust-line strong{color:var(--text);font-weight:600}
+.countup-value{display:inline-block;min-width:5ch;text-align:center;font-variant-numeric:tabular-nums}
+.countup-value.count-tick{animation:count-tick .55s ease-out}
+@keyframes count-tick{
+  0%{opacity:.25;transform:translateY(7px) scale(.96)}
+  65%{opacity:1;transform:translateY(-2px) scale(1.03)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
 .hero-ctas{margin-top:46px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 .btn{border-radius:var(--radius-pill);padding:13px 30px;font-size:1rem;font-weight:600;border:1px solid transparent;transition:transform .12s,background .12s}
 .btn:hover{text-decoration:none;transform:translateY(-1px)}
