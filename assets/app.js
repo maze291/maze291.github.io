@@ -39,9 +39,9 @@
     function readStored() {
       try {
         var stored = parseInt(sessionStorage.getItem(storageKey), 10);
-        return isNaN(stored) ? 0 : Math.min(stored, target);
+        return isNaN(stored) ? 1 : Math.min(Math.max(stored, 1), target);
       } catch (e) {
-        return 0;
+        return 1;
       }
     }
 
@@ -94,6 +94,13 @@
       if (current < target) window._gulfgeekCountTimer = setTimeout(step, randomInt(4000, 7000));
     }
 
+    function initialStep() {
+      current = Math.min(target, current + randomInt(2, 9));
+      writeStored(current);
+      render(true);
+      if (current < target) window._gulfgeekCountTimer = setTimeout(step, randomInt(4000, 7000));
+    }
+
     window.addEventListener('pageshow', function () {
       var stored = readStored();
       if (stored !== current) {
@@ -102,7 +109,9 @@
       }
     });
 
-    window._gulfgeekCountTimer = setTimeout(step, randomInt(4000, 7000));
+    window._gulfgeekCountTimer = current === 1
+      ? setTimeout(initialStep, 1000)
+      : setTimeout(step, randomInt(4000, 7000));
   }
 
   /* ---------- dropdown chips ---------- */
